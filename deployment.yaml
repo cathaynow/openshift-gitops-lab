@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gitops-web
+  template:
+    metadata:
+      labels:
+        app: gitops-web
+    spec:
+      containers:
+      - name: web
+        image: mirror.ocp.lab:8443/admin/httpd-24:latest
+        ports:
+        - containerPort: 8080
