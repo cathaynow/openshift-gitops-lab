@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: prune-test
-data:
-  purpose: "argocd-prune-lab"
